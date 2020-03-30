@@ -1,12 +1,12 @@
 import React from 'react';
-import { StyleSheet, View, TouchableOpacity, Text} from 'react-native';
-import { inject, observer } from "mobx-react";
+import {StyleSheet, View, TouchableOpacity, Text} from 'react-native';
+import {inject, observer} from 'mobx-react';
 
-function Button ({ name, Store, navigation }) {
-  const { updatePage } = Store;
+function Button({name, Store, navigation}) {
+  const {updatePage} = Store;
   const clickButton = () => {
-    updatePage(name)
-  }
+    updatePage(name);
+  };
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={clickButton} style={styles.button}>
@@ -18,18 +18,18 @@ function Button ({ name, Store, navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-  height: '100%',
-  width: '24%',
-  backgroundColor: '#7e7e7e',
-  alignItems: 'center',
-  justifyContent: 'center',
+    height: '100%',
+    width: '24%',
+    backgroundColor: '#7e7e7e',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   button: {
     alignItems: 'center',
     justifyContent: 'center',
     width: '100%',
-    height: '100%'
-  }
-})
+    height: '100%',
+  },
+});
 
-export default inject("Store")(observer(Button));
+export default inject('Store')(observer(Button));

@@ -3,10 +3,10 @@ import {StyleSheet, View, Text} from 'react-native';
 import {inject, observer} from 'mobx-react';
 
 function Content(props) {
-  const {pageMessage} = props.Store;
+  // const {pageMessage} = props.Store;
   return (
     <View style={styles.container}>
-      <Text>{pageMessage}</Text>
+      <Text>Content!!!!!!!!</Text>
     </View>
   );
 }
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'white',
+    backgroundColor: 'red',
   },
 });
 
